@@ -1,0 +1,27 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="bg-white shadow-lg rounded-lg p-6">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Topic: {{ topic }}</h1>
+        
+        <p class="text-lg font-semibold text-gray-700 mb-4">Entries:</p>
+
+        <a href="{% url 'learning_logs:new_entry' topic.id %}" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition duration-300 inline-block mb-4">
+            Add new entry
+        </a>
+
+        <ul class="space-y-4">
+            {% for entry in entries %}
+            <li class="bg-gray-100 p-4 rounded-lg shadow-md">
+                <p class="text-gray-600 text-sm mb-2">{{ entry.date_added|date:'M d, Y H:i' }}</p>
+                <p class="text-gray-800 mb-4">{{ entry.text|linebreaks }}</p>
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}" class="text-blue-600 hover:text-blue-800 transition duration-300">Edit entry</a>
+            </li>
+            {% empty %}
+            <li class="text-gray-600">No entries are added to this topic.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}
