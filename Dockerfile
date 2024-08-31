@@ -19,5 +19,5 @@ EXPOSE 8000
 # Set the environment variable to specify the settings module
 ENV DJANGO_SETTINGS_MODULE=learning_log.settings
 
-# Run the Django application using Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "learning_log.wsgi:application"]
+# Run the Django application
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
