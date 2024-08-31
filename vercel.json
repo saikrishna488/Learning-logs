@@ -1,13 +1,18 @@
 {
-    "builds": [{
-      "src": "learnig_log/wsgi.py",
+  "builds": [
+    {
+      "src": "learning_log/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.3" }
-    }],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "learning_log/wsgi.py"
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.11.3"
       }
-    ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "learning_log/wsgi.py"
+    }
+  ]
 }
