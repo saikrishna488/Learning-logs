@@ -28,6 +28,11 @@ DEBUG = True
 # api/settings.py
 ALLOWED_HOSTS = ['*']
 
+#csrf trusted tokens
+CSRF_TRUSTED_ORIGINS = [
+    'https://learning-log-584904539504.asia-south2.run.app',
+]
+
 
 # Application definition
 
