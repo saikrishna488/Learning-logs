@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--mvt&#d=mm1*@!p&l@smqxaotuujk6$$sxliypxo8q@b@g_6l(
 DEBUG = True
 
 # api/settings.py
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -35,9 +35,6 @@ INSTALLED_APPS = [
     #my_apps
     'learning_logs',
     'users',
-
-    #Third party apps
-    'bootstrap4',
     
     #default django apps
     'django.contrib.admin',
@@ -123,7 +120,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = 'static/'
 
 # Default primary key field type
