@@ -24,5 +24,5 @@ Learning Log is a Django-based web application designed to help users manage and
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/saikrishna488/Learning-log.git
-cd learning-log
+git clone https://github.com/saikrishna488/Learning-logs.git
+cd learning-logs
